@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+  <span>Loja AngularStore</span>
+</mat-toolbar>
+
+<div class="banner">
+  <h1>Bem-vindo à Loja AngularStore!</h1>
+  <p>Os melhores produtos de tecnologia estão aqui.</p>
+  <button (click)="irParaProdutos()" mat-raised-button color="accent" routerLink="produtos">Ver Produtos</button>
+</div>
+
+
+<button (click)="mostrarValor()" mat-flat-button>
+  Clicou!!!!!!!!
+</button>
+<div id="cardd">
+
+
+  @if(aparecendo){
+  <p>Esta aparendo a </p>
+  }
+
+  @for (elem of produtos; track elem.id) {
+  <p>Nome: {{elem.nome}}</p>
+  }
+
+  @for (elementos of produtosServise.produtosServices; track elementos.id) {
+  <p>Preço: {{elementos.preco}}</p>
+  }
+
+  <p>Aqui vão aparecer os produtos</p>
+
+
+
+</div>

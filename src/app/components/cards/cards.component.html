@@ -1,0 +1,10 @@
+<div class="container">
+    <mat-card *ngFor="let i of cards" appearance="outlined" class="cards">
+      <img mat-card-image [src]="i.imagem">
+      <mat-card-title >{{i.nome}}</mat-card-title>
+      <mat-card-content>
+        <p>{{i.descricao}}</p>
+      </mat-card-content>
+    </mat-card>
+</div>
+
