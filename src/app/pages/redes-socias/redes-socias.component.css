@@ -1,0 +1,55 @@
+.contato-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 2px solid #1976d2;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  text-align: center;
+  color: #1976d2;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #1976d2;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #90caf9;
+  cursor: not-allowed;
+}
+
+.erro {
+  color: red;
+  font-size: 12px;
+}
+
+.sucesso {
+  margin-top: 20px;
+  color: green;
+  text-align: center;
+  font-weight: bold;
+}

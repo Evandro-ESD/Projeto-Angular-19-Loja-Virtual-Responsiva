@@ -1,1 +1,37 @@
-<p>redes-socias works!</p>
+<div class="contato-container">
+  <h2>Fale Conosco</h2>
+
+  <form  (ngSubmit)="onSubmit()">
+    <div>
+      <label for="nome">Nome:</label>
+      <input id="nome" type="text" formControlName="nome" />
+      <div class="erro" *ngIf="contatoForm.get('nome')?.invalid && contatoForm.get('nome')?.touched">
+        Nome é obrigatório.
+      </div>
+    </div>
+
+    <div>
+      <label for="email">E-mail:</label>
+      <input id="email" type="email" formControlName="email" />
+      <div class="erro" *ngIf="contatoForm.get('email')?.invalid && contatoForm.get('email')?.touched">
+        E-mail válido é obrigatório.
+      </div>
+    </div>
+
+    <div>
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" rows="5" formControlName="mensagem"></textarea>
+      <div class="erro" *ngIf="contatoForm.get('mensagem')?.invalid && contatoForm.get('mensagem')?.touched">
+        Mínimo 10 caracteres.
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="contatoForm.invalid">Enviar</button>
+  </form>
+
+  <div *ngIf="enviado" class="sucesso">
+    Mensagem enviada com sucesso!
+  </div>
+</div>
+
+

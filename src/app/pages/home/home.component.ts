@@ -47,6 +47,8 @@ export class HomeComponent implements OnInit{
     console.log(this.produtosServise.produtosServices)
   }
 
+
+  // funcção para chamar a rota da página produtos
   irParaProdutos() {
     this.router.navigate(['produtos'])
   }

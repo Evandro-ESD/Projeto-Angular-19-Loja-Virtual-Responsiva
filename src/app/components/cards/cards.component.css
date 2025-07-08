@@ -7,11 +7,6 @@
     background-color: #ccc;
 }
 
-.container {
-    text-decoration: none;
-    color: black;
-}
-
 .container p {
     margin-top: 5px;
     padding: 5px;
@@ -30,4 +25,8 @@
 .cards img {
     padding: 5px;
     height: 150px;
+}
+
+.espaco{
+    flex: 1 1 auto;
 }

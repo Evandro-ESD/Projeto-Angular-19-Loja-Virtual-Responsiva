@@ -1,10 +1,26 @@
 <div class="container">
-    <mat-card *ngFor="let i of cards" appearance="outlined" class="cards">
-      <img mat-card-image [src]="i.imagem">
-      <mat-card-title >{{i.nome}}</mat-card-title>
-      <mat-card-content>
-        <p>{{i.descricao}}</p>
-      </mat-card-content>
-    </mat-card>
-</div>
+  <!-- <mat-card *ngFor="let i of cards" appearance="outlined" class="cards">
+    <img mat-card-image [src]="i.imagem">
+    <mat-card-title>{{i.nome}}</mat-card-title>
+    <mat-card-content>
+      <p>{{i.descricao}}</p>
+    </mat-card-content>
+  </mat-card> -->
 
+  @for(element of produtosService.produtos; track element){
+  <mat-card appearance="raised" class="cards">
+    <img mat-card-image [src]="element.imagem">
+    <mat-card-title>{{element.nome}}</mat-card-title>
+    <mat-card-content>
+      <p>{{element.descricao}}</p>
+    </mat-card-content>
+    <div class="espaco"></div>
+    <mat-card-actions>
+      <button mat-flat-button (click)="mostra()">Comprar</button>
+    </mat-card-actions>
+
+  </mat-card>
+  }
+
+
+</div>
